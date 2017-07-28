@@ -39,7 +39,7 @@ INSTRUCTIONS:
   The generated files are in the directory as the *.LVL file they're from.
  
 How is it:
- - Functional, not finished yet: File browser isn't hooked up completely yet
+ - Functional, now implements file browser
 
 Where is it:
  - Forum Topic: http://www.swbfgamers.com/index.php?topic=12158.0
@@ -57,7 +57,7 @@ Features:
  - Cmd windows are hidden
  - Error handling
  - GUI option controls
+ - File Browser (with multiselect)
 
 Not implemented (fully) yet:
- - File browser (its acting funny)
  - Duplicate file checking
