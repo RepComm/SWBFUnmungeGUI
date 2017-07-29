@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.repcomm.swbfunmungeui;
 
 import java.awt.Color;
@@ -217,12 +212,12 @@ public class MainUI extends javax.swing.JFrame {
         m_OptInput = new javax.swing.JPanel();
         m_lblInTargetGame = new javax.swing.JLabel();
         m_InTargetGame = new javax.swing.JComboBox<>();
+        m_Platform = new javax.swing.JComboBox<>();
         m_OptOutput = new javax.swing.JPanel();
         m_lblOutTargetGame = new javax.swing.JLabel();
         m_lblOutImageFormat = new javax.swing.JLabel();
         m_ImageFormat = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        m_Platform = new javax.swing.JComboBox<>();
         m_OutTargetGame = new javax.swing.JComboBox<>();
         jSplitPane2 = new javax.swing.JSplitPane();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -245,27 +240,32 @@ public class MainUI extends javax.swing.JFrame {
 
         jSplitPane1.setDividerLocation(250);
 
-        m_lblInTargetGame.setText("Game File Version");
+        m_lblInTargetGame.setText("LVL made for");
 
         m_InTargetGame.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "swbf", "swbf_ii" }));
         m_InTargetGame.setBorder(null);
+
+        m_Platform.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "pc", "ps2", "xbox" }));
 
         javax.swing.GroupLayout m_OptInputLayout = new javax.swing.GroupLayout(m_OptInput);
         m_OptInput.setLayout(m_OptInputLayout);
         m_OptInputLayout.setHorizontalGroup(
             m_OptInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(m_OptInputLayout.createSequentialGroup()
-                .addComponent(m_lblInTargetGame, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                .addComponent(m_lblInTargetGame)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(m_InTargetGame, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(m_InTargetGame, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(m_Platform, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         m_OptInputLayout.setVerticalGroup(
             m_OptInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(m_OptInputLayout.createSequentialGroup()
                 .addGroup(m_OptInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(m_lblInTargetGame)
-                    .addComponent(m_InTargetGame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 55, Short.MAX_VALUE))
+                    .addComponent(m_InTargetGame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(m_Platform, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 41, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(m_OptInput);
@@ -275,8 +275,6 @@ public class MainUI extends javax.swing.JFrame {
         m_lblOutImageFormat.setText("Image File Output");
 
         m_ImageFormat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "tga", "png", "dds" }));
-
-        m_Platform.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "pc", "ps2", "xbox" }));
 
         m_OutTargetGame.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "swbf", "swbf_ii" }));
         m_OutTargetGame.setBorder(null);
@@ -289,23 +287,20 @@ public class MainUI extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(m_OptOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(m_lblOutImageFormat, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                    .addComponent(m_lblOutImageFormat, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
                     .addComponent(m_lblOutTargetGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(m_OptOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, m_OptOutputLayout.createSequentialGroup()
-                        .addComponent(m_OutTargetGame, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(m_Platform, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(m_ImageFormat, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(m_OutTargetGame, 0, 142, Short.MAX_VALUE)
+                    .addComponent(m_ImageFormat, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         m_OptOutputLayout.setVerticalGroup(
             m_OptOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(m_OptOutputLayout.createSequentialGroup()
                 .addGroup(m_OptOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(m_OutTargetGame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(m_lblOutTargetGame)
-                    .addComponent(m_Platform, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(m_lblOutTargetGame))
                 .addGroup(m_OptOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(m_OptOutputLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -315,7 +310,7 @@ public class MainUI extends javax.swing.JFrame {
                         .addGroup(m_OptOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(m_ImageFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(m_lblOutImageFormat))))
-                .addGap(0, 32, Short.MAX_VALUE))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         jSplitPane1.setRightComponent(m_OptOutput);
@@ -385,7 +380,7 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jSplitPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(m_Run)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
