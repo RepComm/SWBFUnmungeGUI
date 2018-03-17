@@ -1,3 +1,6 @@
+SWBFUnmungeGUI (java) is archived. Please use NodeUnmungeGUI for more updated project.
+ - http://github.com/RepComm/NodeUnmungeGUI/
+
 Updated for swbf-unmunge v0.5.0 on 7/28/17
 
 What is it:
